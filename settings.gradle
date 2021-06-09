@@ -9,4 +9,6 @@
 
 rootProject.name = 'gift-sertificate'
 include('api')
+include 'repository'
+include 'services'
 

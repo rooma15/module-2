@@ -14,5 +14,6 @@ dependencies {
     compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
-
+    implementation project(":repository")
+    implementation project(":services")
 }
