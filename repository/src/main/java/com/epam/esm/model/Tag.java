@@ -1,7 +1,5 @@
 package com.epam.esm.model;
 
-import com.epam.esm.dto.TagDto;
-
 public class Tag {
     private final Integer id;
     private final String name;
@@ -17,9 +15,5 @@ public class Tag {
 
     public String getName() {
         return name;
-    }
-
-    public TagDto convertToDto(){
-        return new TagDto(id, name);
     }
 }

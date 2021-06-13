@@ -33,8 +33,4 @@ public class TagDto {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Tag convertToModel(){
-        return new Tag(id, name);
-    }
 }

@@ -2,10 +2,9 @@ package com.epam.esm.dto;
 
 import com.epam.esm.dto.TagDto;
 import com.epam.esm.model.Certificate;
-import com.epam.esm.model.Tag;
+import org.springframework.lang.NonNull;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CertificateDto {
     private Integer id;
@@ -33,13 +32,11 @@ public class CertificateDto {
     }
 
     public CertificateDto(String name, String description, Double price,
-                          Integer duration, String createDate, String lastUpdateDate, List<TagDto> tags) {
+                          Integer duration, List<TagDto> tags) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.duration = duration;
-        this.createDate = createDate;
-        this.lastUpdateDate = lastUpdateDate;
         this.tags = tags;
     }
 
@@ -105,9 +102,5 @@ public class CertificateDto {
 
     public void setTags(List<TagDto> tags) {
         this.tags = tags;
-    }
-
-    public Certificate convertToCertificateModel(){
-        return new Certificate(id, name, description, price, duration, createDate, lastUpdateDate);
     }
 }
